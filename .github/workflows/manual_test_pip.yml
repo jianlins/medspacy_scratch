@@ -39,6 +39,8 @@ jobs:
     - name: check clone
       run: |
         ls medspacy
+        pwd
+        ls 
     - name: Set up Python ${{ matrix.python-version }}  ${{ matrix.name }}
       uses: actions/setup-python@v4
       with:
