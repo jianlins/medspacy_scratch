@@ -35,8 +35,9 @@ jobs:
 
     steps:
     - name: create empty requirements.txt
-      echo '' > requirements.txt
-      
+      run: |
+        echo '' > requirements.txt
+
      - name: Set up Python ${{ matrix.python-version }}  ${{ matrix.name }}
       uses: actions/setup-python@v4
       with:
