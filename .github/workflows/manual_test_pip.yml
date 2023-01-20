@@ -30,7 +30,6 @@ jobs:
                   - python-dev
           - name: "MacOS Python 3.8"
             os: macos-latest
-            python-version: 3.8
           # - name: "Windows Python 3.8"
           #   os: windows-2019
           #   python-version: 3.8
