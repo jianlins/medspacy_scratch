@@ -52,6 +52,7 @@ jobs:
         pip install pyodbc
         pip install jupyterlab
         pip install nltk
+        pip install medspacy_quickumls==2.7
         pip install pandas        
         # set up all spacy language models that are used in our pytest tests
         python -m spacy download de_core_news_sm
@@ -73,7 +74,7 @@ jobs:
         ls
         python -c "import shutil;shutil.rmtree('medspacy')"
         ls
-        
+
     - name: Test with pytest
       run: |        
         pytest
