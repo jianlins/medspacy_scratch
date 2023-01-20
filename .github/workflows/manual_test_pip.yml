@@ -17,7 +17,7 @@ jobs:
         python-version: [3.8, 3.9]
         #os: [ubuntu-latest, macos-latest, windows-2019]
         include:
-          - name: "Ubuntu Python 3.8"
+          - name: "Ubuntu"
             os: ubuntu-latest
             addons:
               apt:
@@ -27,7 +27,7 @@ jobs:
                   # https://spacy.io/usage#source-ubuntu
                   - build-essential
                   - python-dev
-          - name: "MacOS Python 3.8"
+          - name: "MacOS"
             os: macos-latest
           # - name: "Windows Python 3.8"
           #   os: windows-2019
