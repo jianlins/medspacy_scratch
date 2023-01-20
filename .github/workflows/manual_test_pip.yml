@@ -35,12 +35,6 @@ jobs:
           #   python-version: 3.8
 
     steps:
-    - uses: actions/checkout@v3
-    - name: check clone
-      run: |
-        ls medspacy
-        pwd
-        ls 
     - name: Set up Python ${{ matrix.python-version }}  ${{ matrix.name }}
       uses: actions/setup-python@v4
       with:
@@ -70,6 +64,21 @@ jobs:
         pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.3.0/en_core_sci_sm-0.3.0.tar.gz
         pip install flake8 pytest
         # we want to test execution of jupyter notebooks in pytest as well
+
+    - uses: actions/checkout@v3
+    - name: check clone
+      run: |
+        ls
+        pwd
+
+    - name: Remove medspacy source code
+      uses: JesseTG/rm@v1.0.3
+      with:
+        path: medspacy
+        
+    - name: check deletion
+      run: |
+        ls
 
     - name: Lint with flake8
       run: |
