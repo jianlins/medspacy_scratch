@@ -34,7 +34,10 @@ jobs:
           #   python-version: 3.8
 
     steps:
-    - name: Set up Python ${{ matrix.python-version }}  ${{ matrix.name }}
+    - name: create empty requirements.txt
+      echo '' > requirements.txt
+      
+     - name: Set up Python ${{ matrix.python-version }}  ${{ matrix.name }}
       uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}   
