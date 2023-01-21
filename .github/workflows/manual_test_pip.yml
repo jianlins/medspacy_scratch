@@ -39,6 +39,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: check clone
       run: |
+        pwd
         ls
         python -c "import shutil;shutil.rmtree('medspacy')"
         ls
