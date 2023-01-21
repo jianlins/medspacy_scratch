@@ -27,3 +27,7 @@ where = ["resources"]
 
 [tool.setuptools_scm]
 write_to = "medspacy/_version.py"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
