@@ -4,7 +4,7 @@ requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
 [project]
 name = "medspacy"
 dynamic = ["version"]
-authors = "medSpaCy"
+authors = ["medSpaCy"]
 description = "Library for clinical NLP with spaCy."
 requires-python = ">=3.8"
 classifiers = [
