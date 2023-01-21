@@ -86,14 +86,6 @@ jobs:
         python -m spacy download de_core_news_sm
         python -m spacy download xx_ent_wiki_sm
 
-    - uses: actions/checkout@v3
-    - name: check clone
-      run: |
-        pwd
-        ls
-        python -c "import shutil;shutil.rmtree('medspacy')"
-        ls
-
     - name: Test with pytest
       run: |        
         pytest
