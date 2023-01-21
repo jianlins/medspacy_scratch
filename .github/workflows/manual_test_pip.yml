@@ -16,15 +16,20 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-    - name: check location
-      run: pwd
+    - uses: actions/checkout@v3
+    - name: check clone
+      run: |
+        pwd
+        ls
+        python -c "import shutil;shutil.rmtree('medspacy')"
+        ls
 
     - name: Set up Python ${{ matrix.python-version }}  ${{ matrix.os }}
       uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}   
         cache: 'pip'   
-        cache-dependency-path: '../tests_requirements.txt'
+        cache-dependency-path: 'tests_requirements.txt'
     - run: |
         python --version
         python -m spacy download de_core_news_sm
