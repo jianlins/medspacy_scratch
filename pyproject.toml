@@ -13,7 +13,7 @@ classifiers = [
 long_description = "file: README.md"
 
 dependencies = [
-    "spacy >= 3.4.1, < 4.*",
+    "spacy >= 3.4.1, < 4.0",
     "PyRuSH >= 1.0.8",
     "pysbd == 0.3.4",
     "jsonschema",
