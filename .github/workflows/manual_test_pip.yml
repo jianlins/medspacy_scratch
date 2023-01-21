@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 
 jobs:
-  build_win:
+  test_win:
   
     # TODO: Do we care if this only runs on allowed branches since we check push/pull_request above?
     #if: github.ref == 'refs/heads/master' OR github.ref == 'refs/heads/develop'
@@ -47,14 +47,14 @@ jobs:
       run: |        
         pytest
 
-  build_linux_mac:
+  test_linux_mac:
   
     # TODO: Do we care if this only runs on allowed branches since we check push/pull_request above?
     #if: github.ref == 'refs/heads/master' OR github.ref == 'refs/heads/develop'
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest]
         python-version: [3.8, 3.9, 3.10.x]
     runs-on: ${{ matrix.os }}
 
