@@ -1,5 +1,6 @@
 [build-system]
 requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "medspacy"
@@ -28,6 +29,3 @@ where = ["resources"]
 [tool.setuptools_scm]
 write_to = "medspacy/_version.py"
 
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
