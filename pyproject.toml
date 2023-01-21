@@ -14,9 +14,6 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 
-[project.urls]
-Homepage = "https://github.com/medspacy/medspacy"
-
 dependencies = [
     "spacy >= 3.4.1, < 4.0",
     "PyRuSH >= 1.0.8",
@@ -24,6 +21,9 @@ dependencies = [
     "jsonschema",
     "medspacy_quickumls == 2.7; sys_platform != 'win32'"
 ]
+
+[project.urls]
+Source = "https://github.com/medspacy/medspacy"
 
 [tool.setuptools]
 include-package-data = true
