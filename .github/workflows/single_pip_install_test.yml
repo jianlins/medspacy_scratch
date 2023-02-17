@@ -35,18 +35,13 @@ jobs:
         python --version
         pip install --upgrade pip
         pip install --use-pep517 -r requirements_piptests.txt
-        python -m spacy download de_core_news_sm
-        python -m spacy download en_core_web_sm
-        python -m spacy download en_core_web_md
-        # multilingual models for testing compatibility
-        python -m spacy download es_core_news_sm
-        python -m spacy download pl_core_news_sm
-        python -m spacy download de_core_news_sm
-        python -m spacy download xx_ent_wiki_sm
-        python -c "import medspacy"
+        
 
     - name: Test with pytest
       run: |
         pwd
         ls
+        python -c "import nltk"
+        python -c "import pandas"
+        python -c "import spacy"
         python -c "import medspacy"
