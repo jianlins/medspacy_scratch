@@ -1,4 +1,4 @@
-name: manual_pip_simple_install
+name: single_pip_install_test
 
 on:
   workflow_dispatch
