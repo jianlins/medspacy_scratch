@@ -45,5 +45,7 @@ jobs:
         python -m spacy download xx_ent_wiki_sm
 
     - name: Test with pytest
-      run: |        
+      run: |
+        pwd
+        ls
         pytest
